@@ -1,0 +1,25 @@
+{
+  "pages":[
+    {
+      "title_ru":"Главная",
+      "title_en":"Main",
+      "alias":"main",
+      "parent": "none",
+      "order":"0"
+    },
+    {
+      "title_ru":"Ошибка 404",
+      "title_en":"Error 404",
+      "alias":"404",
+      "parent": "none",
+      "order":"-1"
+    },
+    {
+      "title_ru":"Поиск",
+      "title_en":"Searching",
+      "alias":"search",
+      "parent": "none",
+      "order":"-2"
+    }
+  ]
+}
