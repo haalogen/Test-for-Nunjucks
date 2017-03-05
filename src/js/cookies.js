@@ -1,5 +1,3 @@
-//здесь будут клиентские функции, которые работают с куками(история, закладки, язык и пр.)
-
 var options = {};
 options.path = "/";
 
@@ -14,9 +12,6 @@ window.onload = function() {
 	printHistory();
 }
 
-function setStakeholdersFilter(stakeholders) {
-	setCookie('stakeholders', stakeholders);
-}
 
 function setLangRu() {
 	setCookie('lang', 'ru', options);
@@ -49,13 +44,9 @@ function printHistory(divid = 'history') {
 		var history = getCookie('history');
 		history = JSON.parse(history);
 		history = history.history;
-		if (history) {
-			historyText = '<ul>';
-		}
 		for (var i = 1; i < history.length; i++) {
-			historyText += '<li>' + history[i] + '<li>';
+			historyText += history[i];
 		}
-		historyText += '</ul>';
 		document.getElementById(divid).innerHTML = historyText;
 	}
 }
@@ -83,11 +74,11 @@ function deleteBookmark(alias) {
 	location.reload();
 }
 
-function updateBookmarks(alias) {
+function updateBookmarks(alias, buttonID) {
 	var temp = getCookie('bookmarks');
 	temp = JSON.parse(temp);
 	temp = temp.bookmarks;
-	var button = document.getElementById('bookmarks');
+	var button = document.getElementById(buttonID);
 	if (temp.indexOf(alias) != -1) {
 		button.setAttribute("onclick", "deleteBookmark('" + alias + "')");
 		button.innerText = 'Удалить закладку';

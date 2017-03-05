@@ -8,6 +8,13 @@
       "order":"0"
     },
     {
+      "title_ru": "Ваша страница",
+      "title_en": "Your page",
+      "alias": "your-page",
+      "parent": "main",
+      "order": "1"
+    },
+    {
       "title_ru":"Ошибка 404",
       "title_en":"Error 404",
       "alias":"404",
