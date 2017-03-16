@@ -8,11 +8,18 @@
       "order":"0"
     },
     {
-      "title_ru": "Ваша страница",
-      "title_en": "Your page",
-      "alias": "your-page",
+      "title_ru": "Пост 1",
+      "title_en": "Post 1",
+      "alias": "post1",
       "parent": "main",
       "order": "1"
+    },
+    {
+      "title_ru": "Пост 2",
+      "title_en": "Post 2",
+      "alias": "post2",
+      "parent": "main",
+      "order": "2"
     },
     {
       "title_ru":"Ошибка 404",

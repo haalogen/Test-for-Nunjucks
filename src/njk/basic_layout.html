@@ -1,0 +1,61 @@
+{% if not(title) %}
+{% set title = "Заголовок по умолчанию" %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title> {{ title }} </title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../styles/blog.css" rel="stylesheet">
+</head>
+<body>
+
+{% include "njk/parts/header.html" %}
+
+<div class="container">
+	<div class="row row-content">
+		<div class="col-sm-8 blog-main">
+			{% block content %}{% endblock %}
+		</div><!-- /.blog-main -->
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+			<div class="sidebar-module sidebar-module-inset">
+				<h4>О проекте</h4>
+				<p>Фокусировка специфицирует медиавес. Интеграция, как принято считать, традиционно оправдывает ролевой опрос. Департамент маркетинга и продаж, следовательно, искажает бренд.</p>
+			</div>
+			<div class="sidebar-module">
+				<h4>Архив</h4>
+				<ol class="list-unstyled">
+					<li><a href="#">Март 2017</a></li>
+					<li><a href="#">Февраль 2017</a></li>
+					<li><a href="#">Январь 2017</a></li>
+					<li><a href="#">Декабрь 2016</a></li>
+					<li><a href="#">Ноябрь 2016</a></li>
+				</ol>
+			</div>
+			<div class="sidebar-module">
+				<h4>Контакты</h4>
+				<ol class="list-unstyled">
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+				</ol>
+			</div>
+		</div><!-- /.blog-sidebar -->
+	</div><!-- /.row -->
+</div><!-- /.container -->
+
+{% include "njk/parts/footer.html" %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

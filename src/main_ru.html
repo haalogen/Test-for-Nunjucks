@@ -1,35 +1,40 @@
-{% set company = "My random company" %}
-  
-{% if not(title) %}
-  {% set title = "Default title" %}
-{% endif %}
+{% extends "njk/basic_layout.html" %}
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+{% block content %}
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
-<body>
+	<div class="blog-post">
+		<h2 class="blog-post-title">Креативный рейтинг в XXI веке</h2>
+		<p class="blog-post-meta">Январь, 1, 2014 автор: <a href="#">Марк</a></p>
 
-<div class="container">
+		<p>Формирование имиджа, согласно Ф.Котлеру, деятельно транслирует потребительский пак-шот. Селекция бренда изменяет обществвенный опрос. Креативная концепция обуславливает рекламоноситель. Таргетирование подсознательно развивает анализ рыночных цен.</p>
+		<hr>
+		<p>Надо сказать, что эффективность действий детерминирует <a href="#">conversion rate</a>, оптимизируя бюджеты. Соц-дем характеристика аудитории, в рамках сегодняшних воззрений, позитивно синхронизирует обществвенный медиабизнес.</p>
+		<hr>
+		<ul class="pager">
+			<li><a href="/page/post1">Читать далее</a></li>
+		</ul>
 
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-  {{ breadcrumbs }}
-</div><!-- /.container -->
+	</div><!-- /.blog-post -->
 
+	<div class="blog-post">
+		<h2 class="blog-post-title">Коллективный медиамикс: предпосылки и развитие</h2>
+		<p class="blog-post-meta">Декабрь, 23, 2013 автор: <a href="#">Анатолий</a></p>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<p>Стимулирование коммьюнити искажает <a href="#">рекламный бриф.</a> Как отмечает Майкл Мескон, отраслевой стандарт определяет бизнес-план. Позиционирование на рынке, как следует из вышесказанного, традиционно масштабирует продукт.</p>
+		<blockquote>
+			<p>Дело в том, что <strong>ретроконверсия национального наследия вырождена.</strong> Стимулирование сбыта, конечно, индуцирует эксклюзивный ребрендинг.</p>
+		</blockquote>
+		<hr>
+		<ul class="pager">
+			<li><a href="/page/post2">Читать далее</a></li>
+		</ul>
+	</div><!-- /.blog-post -->
 
-</body>
-</html>
+	<nav>
+		<ul class="pager">
+			<li><a href="#">Назад</a></li>
+			<li><a href="#">Вперед</a></li>
+		</ul>
+	</nav>
+
+{% endblock %}

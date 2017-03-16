@@ -1,0 +1,26 @@
+{# Comment #}
+<div class="blog-masthead">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<nav class="blog-nav">
+					<a class="blog-nav-item" href="/">Главная</a>
+					<a class="blog-nav-item" href="#">Новости</a>
+					<a class="blog-nav-item" href="#">Контакты</a>
+					<a class="blog-nav-item" href="#">О проекте</a>
+				</nav>
+			</div>
+			<form action="/search/str" id="custom-search-input" class="col-sm-4" method="post">
+				<div class="input-group">
+					<input type="search" name="words" class="form-control input-sm" placeholder="query" />
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-sm" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+		{% include "njk/parts/breadcrumbs.html" %}
+	</div>
+</div>

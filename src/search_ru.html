@@ -1,0 +1,20 @@
+{% extends "njk/basic_layout.html" %}
+
+{% block content %}
+
+<h2 class="blog-post-title">Результаты поиска</h2>
+
+<ul class="results">
+	{% for item in data %}
+	<li>
+		<h3><a href={{ "/page/" + item.alias }}>
+			{{ item.title }}
+		</a></h3>
+		<p>{{ item.text }}</p>
+	</li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}
+
